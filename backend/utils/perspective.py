@@ -7,6 +7,14 @@ from utils.line_filters import (
     get_dominant_clusters
 )
 
+from utils.vanishing_point import (
+    get_intersections,
+    analyze_intersections,
+    draw_extended_lines,
+    draw_intersections,
+    draw_vanishing_point
+)
+
 
 def detect_lines(edges, image):
 
@@ -21,28 +29,44 @@ def detect_lines(edges, image):
 
     if raw_lines is None:
 
-        return 0
+        return {
+            "lines_detected": 0,
+            "vanishing_point": None,
+            "consistency_score": 0
+        }
 
-    # Step 1 — Remove short noisy lines
+    # ----------------------------------------
+    # FILTER SHORT LINES
+    # ----------------------------------------
+
     filtered_lines = filter_short_lines(
         raw_lines,
         min_length=200
     )
 
-    # Step 2 — Cluster lines by direction
+    # ----------------------------------------
+    # CLUSTER BY ANGLE
+    # ----------------------------------------
+
     clusters = cluster_lines_by_angle(
         filtered_lines,
         angle_threshold=10
     )
 
-    # Step 3 — Keep dominant directional groups
+    # ----------------------------------------
+    # KEEP DOMINANT CLUSTERS
+    # ----------------------------------------
+
     dominant_lines = get_dominant_clusters(
         clusters,
         min_lines=3,
         max_lines_per_cluster=5
     )
 
-    # Draw final dominant lines
+    # ----------------------------------------
+    # DRAW DOMINANT LINES
+    # ----------------------------------------
+
     for line in dominant_lines:
 
         x1, y1, x2, y2 = line["coords"]
@@ -55,6 +79,57 @@ def detect_lines(edges, image):
             2
         )
 
-    cv2.imwrite("results/output.jpg", image)
+    # ----------------------------------------
+    # GET INTERSECTIONS
+    # ----------------------------------------
 
-    return len(dominant_lines)
+    intersections, extended_lines = (
+        get_intersections(clusters)
+    )
+
+    # ----------------------------------------
+    # ANALYZE PERSPECTIVE
+    # ----------------------------------------
+
+    analysis = analyze_intersections(
+        intersections
+    )
+
+    vanishing_point = analysis[
+        "vanishing_point"
+    ]
+
+    consistency_score = analysis[
+        "consistency_score"
+    ]
+
+    # ----------------------------------------
+    # VISUALIZATION
+    # ----------------------------------------
+
+    image = draw_extended_lines(
+        image,
+        extended_lines
+    )
+
+    image = draw_intersections(
+        image,
+        intersections
+    )
+
+    image = draw_vanishing_point(
+        image,
+        vanishing_point,
+        consistency_score
+    )
+
+    cv2.imwrite(
+        "results/output.jpg",
+        image
+    )
+
+    return {
+        "lines_detected": len(dominant_lines),
+        "vanishing_point": vanishing_point,
+        "consistency_score": consistency_score
+    }

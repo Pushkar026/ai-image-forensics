@@ -14,11 +14,15 @@ app = FastAPI()
 @app.get("/")
 def home():
 
-    return {"message": "Backend running"}
+    return {
+        "message": "Backend running"
+    }
 
 
 @app.post("/analyze")
-async def analyze_image(file: UploadFile = File(...)):
+async def analyze_image(
+    file: UploadFile = File(...)
+):
 
     contents = await file.read()
 
@@ -28,9 +32,20 @@ async def analyze_image(file: UploadFile = File(...)):
 
     edges = detect_edges(gray)
 
-    line_count = detect_lines(edges, image)
+    analysis = detect_lines(
+        edges,
+        image
+    )
 
     return {
         "message": "Analysis complete",
-        "lines_detected": line_count
+        "lines_detected": analysis[
+            "lines_detected"
+        ],
+        "vanishing_point": analysis[
+            "vanishing_point"
+        ],
+        "consistency_score": analysis[
+            "consistency_score"
+        ]
     }
