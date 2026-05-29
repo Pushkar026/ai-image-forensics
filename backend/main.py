@@ -1,7 +1,7 @@
 from fastapi import FastAPI, UploadFile, File
 
 from utils.image_processing import (
-    decode_image,
+    decode_image,resize_image,
     convert_to_gray,
     detect_edges
 )
@@ -27,6 +27,11 @@ async def analyze_image(
     contents = await file.read()
 
     image = decode_image(contents)
+    
+    image = resize_image(
+    image,
+    max_width=1600
+)
 
     gray = convert_to_gray(image)
 

@@ -129,6 +129,12 @@ def get_intersections(clusters):
                         ):
 
                             intersections.append(point)
+    total_lines = 0
+
+    for lines in clusters.values():
+        total_lines += len(lines)
+
+    print(f"Lines used for intersections: {total_lines}")
 
     return intersections, extended_lines
 
@@ -144,6 +150,31 @@ def analyze_intersections(intersections):
         }
 
     points = np.array(intersections)
+
+    print(
+        f"Points before compression: {len(points)}"
+    )
+
+    # ----------------------------------------
+    # COMPRESS NEAR-DUPLICATE POINTS
+    # ----------------------------------------
+
+    points = np.round(
+        points / 5
+    ) * 5
+
+    points = np.unique(
+        points,
+        axis=0
+    )
+
+    print(
+        f"Points after compression: {len(points)}"
+    )
+
+    # ----------------------------------------
+    # DBSCAN
+    # ----------------------------------------
 
     clustering = DBSCAN(
         eps=80,
@@ -182,18 +213,17 @@ def analyze_intersections(intersections):
         axis=0
     )
 
-    # ------------------------------------------------
+    # ----------------------------------------
     # FORENSIC METRICS
-    # ------------------------------------------------
+    # ----------------------------------------
 
-    total_intersections = len(intersections)
+    total_intersections = len(points)
 
     cluster_ratio = (
         len(best_cluster)
         / total_intersections
     )
 
-    # Spread of cluster
     distances = []
 
     for point in best_cluster:
@@ -206,11 +236,14 @@ def analyze_intersections(intersections):
 
     spread = np.mean(distances)
 
-    # Higher spread = worse consistency
-    spread_penalty = min(spread / 300, 1)
+    spread_penalty = min(
+        spread / 300,
+        1
+    )
 
     consistency_score = (
-        cluster_ratio * (1 - spread_penalty)
+        cluster_ratio
+        * (1 - spread_penalty)
     )
 
     return {

@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import time 
 
 from utils.line_filters import (
     filter_short_lines,
@@ -17,6 +18,7 @@ from utils.vanishing_point import (
 
 
 def detect_lines(edges, image):
+    start_time = time.time()
 
     raw_lines = cv2.HoughLinesP(
         edges,
@@ -83,17 +85,31 @@ def detect_lines(edges, image):
     # GET INTERSECTIONS
     # ----------------------------------------
 
+    intersection_start = time.time()
+
     intersections, extended_lines = (
-        get_intersections(clusters)
+    get_intersections(clusters)
+)
+
+    print(
+    f"Intersection Stage: "
+    f"{round(time.time() - intersection_start, 2)} sec"
     )
 
     # ----------------------------------------
     # ANALYZE PERSPECTIVE
     # ----------------------------------------
 
+    analysis_start = time.time()
+
     analysis = analyze_intersections(
-        intersections
-    )
+    intersections
+)
+
+    print(
+    f"Analysis Stage: "
+    f"{round(time.time() - analysis_start, 2)} sec"
+)
 
     vanishing_point = analysis[
         "vanishing_point"
@@ -107,26 +123,44 @@ def detect_lines(edges, image):
     # VISUALIZATION
     # ----------------------------------------
 
+    draw_start = time.time()
+
     image = draw_extended_lines(
-        image,
-        extended_lines
-    )
+    image,
+    extended_lines
+)
 
     image = draw_intersections(
-        image,
-        intersections
-    )
+    image,
+    intersections
+)
 
     image = draw_vanishing_point(
-        image,
-        vanishing_point,
-        consistency_score
-    )
+    image,
+    vanishing_point,
+    consistency_score
+)
+
+    print(
+    f"Drawing Stage: "
+    f"{round(time.time() - draw_start, 2)} sec"
+)
 
     cv2.imwrite(
         "results/output.jpg",
         image
     )
+    
+    print("\n===== DEBUG =====")
+    print(f"Raw lines: {len(raw_lines)}")
+    print(f"Filtered lines: {len(filtered_lines)}")
+    print(f"Dominant lines: {len(dominant_lines)}")
+    print(f"Intersections: {len(intersections)}")
+    print(
+    f"Execution Time: "
+    f"{round(time.time() - start_time, 2)} sec"
+)
+    print("=================\n")
 
     return {
         "lines_detected": len(dominant_lines),

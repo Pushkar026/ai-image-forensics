@@ -9,6 +9,26 @@ def decode_image(contents):
 
     return image
 
+def resize_image(image, max_width=1600):
+
+    height, width = image.shape[:2]
+
+    if width <= max_width:
+        return image
+
+    scale = max_width / width
+
+    new_width = int(width * scale)
+    new_height = int(height * scale)
+
+    resized = cv2.resize(
+        image,
+        (new_width, new_height),
+        interpolation=cv2.INTER_AREA
+    )
+
+    return resized
+
 
 def convert_to_gray(image):
 
