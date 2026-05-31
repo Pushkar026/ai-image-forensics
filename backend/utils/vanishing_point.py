@@ -144,8 +144,9 @@ def analyze_intersections(intersections):
     if len(intersections) == 0:
 
         return {
+            "status": "insufficient_geometry",
             "vanishing_point": None,
-            "consistency_score": 0,
+            "consistency_score": None,
             "cluster_ratio": 0
         }
 
@@ -203,8 +204,9 @@ def analyze_intersections(intersections):
     if len(best_cluster) == 0:
 
         return {
+            "status": "insufficient_geometry",
             "vanishing_point": None,
-            "consistency_score": 0,
+            "consistency_score": None,
             "cluster_ratio": 0
         }
 

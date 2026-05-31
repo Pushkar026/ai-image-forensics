@@ -30,11 +30,19 @@ for category in ["real", "ai"]:
             )
 
         data = response.json()
+        
+        print(data)
 
-        score = data.get(
-            "consistency_score",
-            0
-        )
+        if data.get("consistency_score") is None:
+
+            score = "insufficient_geometry"
+
+        else:
+
+            score = data.get(
+        "consistency_score",
+        0
+    )
 
         results.append([
             filename,

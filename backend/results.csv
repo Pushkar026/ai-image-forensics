@@ -1,9 +1,42 @@
 filename,type,score
+P1020171.jpg,real,0.42
+P1020177.jpg,real,0.326
+P1020816.jpg,real,0.786
+P1020817.jpg,real,0.393
+P1020819.jpg,real,0.434
+P1020822.jpg,real,0.589
+P1020825.jpg,real,insufficient_geometry
+P1020826.jpg,real,insufficient_geometry
+P1020831.jpg,real,0.28
+P1020833.jpg,real,insufficient_geometry
+P1020838.jpg,real,0.917
+P1020839.jpg,real,0.403
+P1020841.jpg,real,insufficient_geometry
+P1020845.jpg,real,0.299
+P1020854.jpg,real,0.329
+P1020856.jpg,real,0.384
+P1020860.jpg,real,0.385
+P1020871.jpg,real,0.201
+P1020872.jpg,real,0.519
+P1020887.jpg,real,0.636
+P1020912.jpg,real,0.535
+P1020928.jpg,real,0.322
 Screenshot 2026-05-28 160228.png,real,0.434
-severance169-scaled.jpg,real,0.593
-track-rail-500x500.webp,real,0.641
-"ChatGPT Image May 28, 2026, 06_54_08 PM.png",ai,0.0
-"ChatGPT Image May 28, 2026, 06_57_48 PM.png",ai,0.0
-Gemini_Generated_Image_cm6y4rcm6y4rcm6y.png,ai,0.0
-Gemini_Generated_Image_vpnjyxvpnjyxvpnj.png,ai,0.0
-_20260430_nf_misinfo_farid-perspective.jpg,ai,0.143
+90b7b970-5688-47e5-883e-db8dd57285f5.jpg,ai,0.255
+"ChatGPT Image May 30, 2026, 02_08_19 PM.png",ai,0.0
+"ChatGPT Image May 30, 2026, 02_10_49 PM.png",ai,0.088
+"ChatGPT Image May 31, 2026, 04_02_03 PM.png",ai,0.0
+"ChatGPT Image May 31, 2026, 04_04_01 PM.png",ai,0.0
+"ChatGPT Image May 31, 2026, 04_05_35 PM.png",ai,0.0
+Gemini_Generated_Image_2cibbr2cibbr2cib.png,ai,0.0
+Gemini_Generated_Image_evdspwevdspwevds.png,ai,0.066
+Gemini_Generated_Image_h41hv6h41hv6h41h.png,ai,0.168
+Gemini_Generated_Image_l35j5ul35j5ul35j.png,ai,0.265
+Gemini_Generated_Image_vpnjyxvpnjyxvpnj.png,ai,0.171
+Gemini_Generated_Image_vx573hvx573hvx57.png,ai,0.0
+gpt-image-2_A_photorealistic_classroom_interior_shot_with_a_Canon_EOS_R5_camera_24mm_wide-an-0.jpg,ai,0.0
+lucid-origin_A_hyper-realistic_photo_of_a_building_as_seen_from_a_public_road_camera_held_at_-0.jpg,ai,0.0
+lucid-origin_A_photorealistic_interior_hallway_shot_with_a_Canon_EOS_R5_camera_35mm_lens_f_2.-0.jpg,ai,0.088
+lucid-origin_A_photorealistic_street-level_photograph_of_a_tall_modern_glass_and_steel_office-0.jpg,ai,0.0
+lucid-origin_handheld_photo_of_a_long_interior_hallway_shot_from_standing_eye_level_slightly_-0.jpg,ai,0.145
+_20260430_nf_misinfo_farid-perspective.jpg,ai,0.103

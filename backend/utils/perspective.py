@@ -32,9 +32,10 @@ def detect_lines(edges, image):
     if raw_lines is None:
 
         return {
+            "status": "insufficient_geometry",
             "lines_detected": 0,
             "vanishing_point": None,
-            "consistency_score": 0
+            "consistency_score": None
         }
 
     # ----------------------------------------
@@ -61,8 +62,8 @@ def detect_lines(edges, image):
 
     dominant_lines = get_dominant_clusters(
         clusters,
-        min_lines=3,
-        max_lines_per_cluster=5
+        min_lines=1,
+        max_lines_per_cluster=8
     )
 
     # ----------------------------------------
@@ -87,9 +88,16 @@ def detect_lines(edges, image):
 
     intersection_start = time.time()
 
-    intersections, extended_lines = (
-    get_intersections(clusters)
+    dominant_clusters = cluster_lines_by_angle(
+    dominant_lines,
+    angle_threshold=10
 )
+
+    intersections, extended_lines = (
+    get_intersections(dominant_clusters)
+)
+
+
 
     print(
     f"Intersection Stage: "
@@ -105,6 +113,14 @@ def detect_lines(edges, image):
     analysis = analyze_intersections(
     intersections
 )
+    if analysis.get("status") == "insufficient_geometry":
+
+        return {
+        "status": "insufficient_geometry",
+        "lines_detected": len(dominant_lines),
+        "vanishing_point": None,
+        "consistency_score": None
+    }
 
     print(
     f"Analysis Stage: "
