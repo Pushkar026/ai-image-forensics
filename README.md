@@ -67,7 +67,7 @@ The detected architectural lines converge consistently toward a dominant vanishi
 
 ### Input Image
 
-![AI Input](screenshots/ChatGPT Image Jun 1, 2026, 04_29_46 PM.png)
+![AI Input](screenshots/ai_image.png)
 
 ### Geometric Analysis Output
 
