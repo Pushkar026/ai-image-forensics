@@ -1,42 +1,201 @@
-filename,type,score
-P1020171.jpg,real,0.42
-P1020177.jpg,real,0.326
-P1020816.jpg,real,0.786
-P1020817.jpg,real,0.393
-P1020819.jpg,real,0.434
-P1020822.jpg,real,0.589
-P1020825.jpg,real,insufficient_geometry
-P1020826.jpg,real,insufficient_geometry
-P1020831.jpg,real,0.28
-P1020833.jpg,real,insufficient_geometry
-P1020838.jpg,real,0.917
-P1020839.jpg,real,0.403
-P1020841.jpg,real,insufficient_geometry
-P1020845.jpg,real,0.299
-P1020854.jpg,real,0.329
-P1020856.jpg,real,0.384
-P1020860.jpg,real,0.385
-P1020871.jpg,real,0.201
-P1020872.jpg,real,0.519
-P1020887.jpg,real,0.636
-P1020912.jpg,real,0.535
-P1020928.jpg,real,0.322
-Screenshot 2026-05-28 160228.png,real,0.434
-90b7b970-5688-47e5-883e-db8dd57285f5.jpg,ai,0.255
-"ChatGPT Image May 30, 2026, 02_08_19 PM.png",ai,0.0
-"ChatGPT Image May 30, 2026, 02_10_49 PM.png",ai,0.088
-"ChatGPT Image May 31, 2026, 04_02_03 PM.png",ai,0.0
-"ChatGPT Image May 31, 2026, 04_04_01 PM.png",ai,0.0
-"ChatGPT Image May 31, 2026, 04_05_35 PM.png",ai,0.0
-Gemini_Generated_Image_2cibbr2cibbr2cib.png,ai,0.0
-Gemini_Generated_Image_evdspwevdspwevds.png,ai,0.066
-Gemini_Generated_Image_h41hv6h41hv6h41h.png,ai,0.168
-Gemini_Generated_Image_l35j5ul35j5ul35j.png,ai,0.265
-Gemini_Generated_Image_vpnjyxvpnjyxvpnj.png,ai,0.171
-Gemini_Generated_Image_vx573hvx573hvx57.png,ai,0.0
-gpt-image-2_A_photorealistic_classroom_interior_shot_with_a_Canon_EOS_R5_camera_24mm_wide-an-0.jpg,ai,0.0
-lucid-origin_A_hyper-realistic_photo_of_a_building_as_seen_from_a_public_road_camera_held_at_-0.jpg,ai,0.0
-lucid-origin_A_photorealistic_interior_hallway_shot_with_a_Canon_EOS_R5_camera_35mm_lens_f_2.-0.jpg,ai,0.088
-lucid-origin_A_photorealistic_street-level_photograph_of_a_tall_modern_glass_and_steel_office-0.jpg,ai,0.0
-lucid-origin_handheld_photo_of_a_long_interior_hallway_shot_from_standing_eye_level_slightly_-0.jpg,ai,0.145
-_20260430_nf_misinfo_farid-perspective.jpg,ai,0.103
+filename,type,score,prediction
+00.jpg,real,0.0,ai
+00_17.jpg,real,0.339,real
+02_3_Day_Classroom_Overview.jpg,real,0.564,real
+050709_bild7_Schulhaus_Korridor.jpg,real,0.016,ai
+06_Right_corridor_of_the_main_hall.jpg,real,0.0,ai
+1.jpg,real,0.719,real
+108_htmlarea_perso_630_1_L.jpg,real,0.567,real
+1093023.jpg,real,0.459,real
+10_27_05_corridor.jpg,real,0.0,ai
+112630581_f21ae30872.jpg,real,0.274,real
+113_1313.jpg,real,insufficient_geometry,unknown
+118463700_ead3ee32e3.jpg,real,insufficient_geometry,unknown
+125_115_LibrairieNas.jpg,real,0.555,real
+12_student_classroom_4_computer_training_1.jpg,real,insufficient_geometry,unknown
+130309783_f194f43f71.jpg,real,0.71,real
+1552211138_a17100bcf5.jpg,real,insufficient_geometry,unknown
+1685_sb_corridor.jpg,real,0.055,ai
+16_corridor.jpg,real,0.553,real
+1782001450_ec797a2c7c.jpg,real,insufficient_geometry,unknown
+1797_1796_librairie.jpg,real,0.654,real
+195707530_69d72677ab.jpg,real,0.642,real
+1994_salle_info_fdt2.jpg,real,0.678,real
+1st_floor_hallway.jpg,real,0.653,real
+204942053_a5d52d7746.jpg,real,0.629,real
+207157437_14c21369e9.jpg,real,0.662,real
+214classroom.jpg,real,0.505,real
+236254301_fa02eae064.jpg,real,0.729,real
+244class.jpg,real,0.609,real
+2632.jpg,real,insufficient_geometry,unknown
+2639.jpg,real,0.725,real
+28_06_06_Bibliotheque_Municipale_19_2.jpg,real,0.638,real
+302496265_f7b9b7a91f.jpg,real,0.925,real
+30_AvH_112_classroom.jpg,real,0.437,real
+34_AvH_014_library_stacks.jpg,real,0.533,real
+370663920_b87c065936.jpg,real,0.561,real
+373437852_4e3926fe0c.jpg,real,0.617,real
+3e7e40981ddd4cdb055c7ffe4c2af5d8.jpg,real,0.154,ai
+3_17_05_3rd_Fooor_South_Corridor.jpg,real,0.0,ai
+4002_Librairie1.jpg,real,0.749,real
+400px_Walton_High_School_New_Classroom.jpg,real,0.173,ai
+430_Korridor_300.jpg,real,0.602,real
+43407107_204b8504b5.jpg,real,0.622,real
+450px_Bibliothek_im_Reformierten_Kollegium_Debrecen.jpg,real,0.13,ai
+4699_Boutique_train.jpg,real,0.58,real
+4703_Boutique_K_rylos.jpg,real,0.498,real
+4705_Boutique_Valen_ay.jpg,real,0.714,real
+470618728_18b5550006.jpg,real,0.624,real
+4707_Boutique_n_mes.jpg,real,0.745,real
+473767793_d3cafc4eff.jpg,real,0.601,real
+57048683_74701f9fa9.jpg,real,0.554,real
+6226.jpg,real,0.354,real
+6417.jpg,real,0.129,ai
+68522859_a36fa01d31.jpg,real,0.571,real
+749300760_2f7b1f5ccb.jpg,real,0.532,real
+792089_e681119c26.jpg,real,0.391,real
+800px_Wil_Buchhandlung_3104.jpg,real,0.0,ai
+88cf8ddab2129088920d520f9f47f7f5.jpg,real,0.701,real
+8_bookstore.jpg,real,0.508,real
+90468092_47c4b7f04d.jpg,real,0.59,real
+9f63b46ad67dbc0868afa77a45d339bb.jpg,real,0.689,real
+aa053951.jpg,real,0.255,real
+aca_hall2.jpg,real,0.645,real
+accessories24.jpg,real,insufficient_geometry,unknown
+allee2yp.jpg,real,0.533,real
+american_history_classroom.jpg,real,0.615,real
+ap_de_marlene035.jpg,real,0.636,real
+ascension_corridor.jpg,real,0.458,real
+auingl.jpg,real,0.337,real
+AULA11_1TAMAOGRANDE.jpg,real,0.0,ai
+AULA3C_1TAMAOGRANDE.jpg,real,0.088,ai
+aulainfantil.jpg,real,0.0,ai
+aulas_007.jpg,real,0.0,ai
+aula_informat1.jpg,real,0.0,ai
+aula_informatica_gif.jpg,real,0.111,ai
+aut_0003.jpg,real,0.56,real
+biblioteca2.jpg,real,0.0,ai
+Blue_Peach_Corridor.jpg,real,0.205,ai
+building_one_top_corridor.jpg,real,0.453,real
+c1.jpg,real,0.642,real
+c2.jpg,real,insufficient_geometry,unknown
+c3.jpg,real,0.324,real
+c5.jpg,real,insufficient_geometry,unknown
+CEC_208_classroom.jpg,real,0.342,real
+CLASSE3.jpg,real,0.632,real
+Classroom.jpg,real,0.382,real
+class_room_2.jpg,real,0.658,real
+corneroffice.jpg,real,0.51,real
+cover_image_dreamoffice.jpg,real,0.217,ai
+d53.jpg,real,0.589,real
+dell3007wfp_desk.jpg,real,0.086,ai
+despacho.jpg,real,0.0,ai
+despacho1_400.jpg,real,0.476,real
+despacho2.jpg,real,0.041,ai
+despacho2_400.jpg,real,0.501,real
+despacho3_400.jpg,real,0.47,real
+despacho_medico_2.jpg,real,0.421,real
+eagle_office.jpg,real,0.184,ai
+emba_offices_before_move.jpg,real,0.432,real
+estudio2.jpg,real,0.11,ai
+_7BB05260_2CB9_464F_8403_ABFA52061E3E_.jpg,real,0.754,real
+"ChatGPT Image Jun 1, 2026, 04_19_15 PM.png",ai,0.225,ai
+"ChatGPT Image Jun 1, 2026, 04_20_51 PM.png",ai,0.241,ai
+"ChatGPT Image Jun 1, 2026, 04_27_17 PM.png",ai,0.0,ai
+"ChatGPT Image Jun 1, 2026, 04_29_46 PM.png",ai,0.146,ai
+"ChatGPT Image Jun 2, 2026, 01_02_13 AM.png",ai,0.104,ai
+"ChatGPT Image Jun 2, 2026, 01_03_25 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_07_23 AM.png",ai,0.034,ai
+"ChatGPT Image Jun 2, 2026, 01_09_31 AM.png",ai,0.176,ai
+"ChatGPT Image Jun 2, 2026, 01_22_00 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_22_56 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_24_02 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_25_26 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_27_06 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_29_46 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_43_23 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_44_39 AM.png",ai,0.002,ai
+"ChatGPT Image Jun 2, 2026, 01_45_48 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_46_57 AM.png",ai,0.009,ai
+"ChatGPT Image Jun 2, 2026, 01_48_18 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 01_49_36 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 02_40_51 AM.png",ai,0.148,ai
+"ChatGPT Image Jun 2, 2026, 02_43_07 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 02_43_56 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 02_44_59 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 02_45_58 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 02_47_48 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 03_14_29 AM.png",ai,0.075,ai
+"ChatGPT Image Jun 2, 2026, 03_16_56 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 11_45_35 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 11_47_21 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 11_48_35 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 11_49_45 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 11_51_57 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 11_53_52 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 11_54_51 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 12_53_37 AM.png",ai,0.152,ai
+"ChatGPT Image Jun 2, 2026, 12_55_52 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 12_57_32 AM.png",ai,0.0,ai
+"ChatGPT Image Jun 2, 2026, 12_58_57 AM.png",ai,0.011,ai
+flux-pro-2.0_geneart_a_book_store_image_with_no_people_that_is_super_super_real_lik_should_fe-0.jpg,ai,0.0,ai
+Gemini_Generated_Image_2cq8vx2cq8vx2cq8 (1).png,ai,0.0,ai
+Gemini_Generated_Image_2cq8vx2cq8vx2cq8 (2).png,ai,0.0,ai
+Gemini_Generated_Image_2cq8vx2cq8vx2cq8 (3).png,ai,0.081,ai
+Gemini_Generated_Image_2cq8vx2cq8vx2cq8.png,ai,0.152,ai
+Gemini_Generated_Image_3i8hf13i8hf13i8h.png,ai,0.086,ai
+Gemini_Generated_Image_3q4wma3q4wma3q4w.png,ai,0.005,ai
+Gemini_Generated_Image_5dgcvp5dgcvp5dgc (1).png,ai,0.0,ai
+Gemini_Generated_Image_5dgcvp5dgcvp5dgc (2).png,ai,0.0,ai
+Gemini_Generated_Image_5dgcvp5dgcvp5dgc (3).png,ai,0.081,ai
+Gemini_Generated_Image_5dgcvp5dgcvp5dgc (4).png,ai,0.0,ai
+Gemini_Generated_Image_5dgcvp5dgcvp5dgc.png,ai,0.119,ai
+Gemini_Generated_Image_65if9s65if9s65if.png,ai,0.0,ai
+Gemini_Generated_Image_856sv856sv856sv8.png,ai,0.0,ai
+Gemini_Generated_Image_8ad3y48ad3y48ad3.png,ai,0.0,ai
+Gemini_Generated_Image_97ybke97ybke97yb.png,ai,0.0,ai
+Gemini_Generated_Image_ab7ctpab7ctpab7c.png,ai,0.0,ai
+Gemini_Generated_Image_azjqisazjqisazjq.png,ai,0.0,ai
+Gemini_Generated_Image_c6fo20c6fo20c6fo.png,ai,0.0,ai
+Gemini_Generated_Image_cqtluqcqtluqcqtl.png,ai,0.0,ai
+Gemini_Generated_Image_dw0e1udw0e1udw0e (1).png,ai,0.0,ai
+Gemini_Generated_Image_dw0e1udw0e1udw0e (2).png,ai,0.0,ai
+Gemini_Generated_Image_dw0e1udw0e1udw0e (3).png,ai,0.153,ai
+Gemini_Generated_Image_dw0e1udw0e1udw0e (4).png,ai,0.0,ai
+Gemini_Generated_Image_dw0e1udw0e1udw0e.png,ai,0.182,ai
+Gemini_Generated_Image_dyg9lddyg9lddyg9.png,ai,0.0,ai
+Gemini_Generated_Image_g6knd8g6knd8g6kn.png,ai,0.0,ai
+Gemini_Generated_Image_gjikvbgjikvbgjik.png,ai,0.152,ai
+Gemini_Generated_Image_hy13uthy13uthy13.png,ai,0.0,ai
+Gemini_Generated_Image_i5gimoi5gimoi5gi.png,ai,0.061,ai
+Gemini_Generated_Image_j5jmxpj5jmxpj5jm.png,ai,0.0,ai
+Gemini_Generated_Image_jt8x3ojt8x3ojt8x.png,ai,0.0,ai
+Gemini_Generated_Image_juwx1wjuwx1wjuwx.png,ai,0.0,ai
+Gemini_Generated_Image_ll4n9tll4n9tll4n.png,ai,0.0,ai
+Gemini_Generated_Image_n1nxxfn1nxxfn1nx.png,ai,0.0,ai
+Gemini_Generated_Image_ph3grfph3grfph3g.png,ai,0.0,ai
+Gemini_Generated_Image_phmd2vphmd2vphmd.png,ai,0.0,ai
+Gemini_Generated_Image_ppccg0ppccg0ppcc.png,ai,0.0,ai
+Gemini_Generated_Image_qkpjs3qkpjs3qkpj.png,ai,0.0,ai
+Gemini_Generated_Image_qqu7i2qqu7i2qqu7.png,ai,0.0,ai
+Gemini_Generated_Image_r5djd0r5djd0r5dj.png,ai,0.0,ai
+Gemini_Generated_Image_uc2pehuc2pehuc2p.png,ai,0.0,ai
+Gemini_Generated_Image_v8trmkv8trmkv8tr.png,ai,0.0,ai
+Gemini_Generated_Image_vxrr0lvxrr0lvxrr.png,ai,0.0,ai
+Gemini_Generated_Image_w6sn0sw6sn0sw6sn.png,ai,0.0,ai
+Gemini_Generated_Image_x51395x51395x513.png,ai,0.0,ai
+Gemini_Generated_Image_xdq86xxdq86xxdq8.png,ai,0.0,ai
+Gemini_Generated_Image_yii615yii615yii6.png,ai,0.0,ai
+Gemini_Generated_Image_z6tcivz6tcivz6tc.png,ai,0.0,ai
+Gemini_Generated_Image_za2bcoza2bcoza2b.png,ai,0.0,ai
+lucid-origin_genearte_a_realistic_classrom_image_with_no_students_should_feel_like_taken_from-0.jpg,ai,0.0,ai
+lucid-origin_genearte_a_realistic_libary_image_with_no_students_should_feel_like_taken_from_a-0 (1).jpg,ai,0.0,ai
+lucid-origin_genearte_a_realistic_libary_image_with_no_students_should_feel_like_taken_from_a-0.jpg,ai,0.0,ai
+lucid-origin_genearte_a_realistic_office_image_with_no_students_should_feel_like_taken_from_a-0.jpg,ai,0.0,ai
+lucid-origin_geneart_a_book_store_image_with_no_people_that_is_super_super_real_lik_should_fe-0.jpg,ai,0.0,ai
+lucid-origin_generate_a_super_realisitci_corridor_image_that_should_look_like_taken_from_a_re-0 (1).jpg,ai,0.281,real
+lucid-origin_generate_a_super_realisitci_corridor_image_that_should_look_like_taken_from_a_re-0.jpg,ai,0.033,ai
+lucid-origin_generate_classroom_image_should_look_super_super_realistic_like_taken_from_a_rea-0 (1).jpg,ai,0.0,ai
+lucid-origin_generate_classroom_image_should_look_super_super_realistic_like_taken_from_a_rea-0 (2).jpg,ai,0.0,ai
+lucid-origin_generate_classroom_image_should_look_super_super_realistic_like_taken_from_a_rea-0.jpg,ai,0.032,ai
+nano-banana-2_geneart_a_book_store_image_with_no_people_that_is_super_super_real_lik_should_fe-0.jpg,ai,0.0,ai

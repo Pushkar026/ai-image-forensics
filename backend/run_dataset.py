@@ -8,56 +8,67 @@ results = []
 
 for category in ["real", "ai"]:
 
-    folder = os.path.join(
-        "dataset",
-        category
-    )
+    folder = os.path.join("dataset", category)
 
     for filename in os.listdir(folder):
 
-        path = os.path.join(
-            folder,
-            filename
-        )
+        path = os.path.join(folder, filename)
 
-        with open(path, "rb") as image:
+        if not os.path.isfile(path):
+            continue
 
-            response = requests.post(
-                API_URL,
-                files={
-                    "file": image
-                }
-            )
+        try:
+            with open(path, "rb") as image:
 
-        data = response.json()
-        
-        print(data)
+                response = requests.post(
+                    API_URL,
+                    files={"file": image}
+                )
 
-        if data.get("consistency_score") is None:
+            data = response.json()
 
-            score = "insufficient_geometry"
+            print(data)
 
-        else:
+            score = data.get("consistency_score")
 
-            score = data.get(
-        "consistency_score",
-        0
-    )
+            # Handle insufficient geometry
+            if score is None:
 
-        results.append([
-            filename,
-            category,
-            score
-        ])
+                score = "insufficient_geometry"
+                prediction = "unknown"
 
-        print(
-            f"{filename} -> {score}"
-        )
+            else:
+
+                if score >= 0.25:
+                    prediction = "real"
+                else:
+                    prediction = "ai"
+
+            results.append([
+                filename,
+                category,
+                score,
+                prediction
+            ])
+
+            print(f"{filename} -> {score} -> {prediction}")
+
+        except Exception as e:
+
+            print(f"Error processing {filename}: {e}")
+
+            results.append([
+                filename,
+                category,
+                "error",
+                "error"
+            ])
 
 with open(
     "results.csv",
     "w",
-    newline=""
+    newline="",
+    encoding="utf-8"
 ) as file:
 
     writer = csv.writer(file)
@@ -65,9 +76,11 @@ with open(
     writer.writerow([
         "filename",
         "type",
-        "score"
+        "score",
+        "prediction"
     ])
 
     writer.writerows(results)
 
 print("\nDone!")
+print(f"Processed {len(results)} images.")

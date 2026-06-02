@@ -24,10 +24,15 @@ def detect_lines(edges, image):
         edges,
         1,
         np.pi / 180,
-        threshold=180,
-        minLineLength=100,
-        maxLineGap=20
+        threshold=80,
+        minLineLength=50,
+        maxLineGap=30
     )
+    
+    if raw_lines is not None:
+        print(f"Raw lines before filtering: {len(raw_lines)}")
+    else:
+        print("Raw lines before filtering: 0")
 
     if raw_lines is None:
 
