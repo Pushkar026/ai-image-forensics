@@ -296,6 +296,21 @@ def draw_intersections(image, intersections):
     return image
 
 
+def draw_intersections(image, intersections):
+
+    for point in intersections:
+
+        cv2.circle(
+            image,
+            point,
+            3,
+            (255, 0, 0),
+            -1
+        )
+
+    return image
+
+
 def draw_vanishing_point(
     image,
     vanishing_point,
@@ -305,27 +320,48 @@ def draw_vanishing_point(
     if vanishing_point is None:
         return image
 
+    vp_x, vp_y = vanishing_point
+
+    # Small target circle
     cv2.circle(
         image,
         vanishing_point,
-        15,
+        8,
         (0, 0, 255),
-        -1
+        2
+    )
+
+    # Horizontal crosshair
+    cv2.line(
+        image,
+        (vp_x - 10, vp_y),
+        (vp_x + 10, vp_y),
+        (0, 0, 255),
+        2
+    )
+
+    # Vertical crosshair
+    cv2.line(
+        image,
+        (vp_x, vp_y - 10),
+        (vp_x, vp_y + 10),
+        (0, 0, 255),
+        2
     )
 
     text = (
-        f"Consistency: {consistency_score}"
+        f"Consistency: {consistency_score:.3f}"
     )
 
     cv2.putText(
         image,
         text,
         (
-            vanishing_point[0] + 20,
-            vanishing_point[1]
+            vp_x + 20,
+            vp_y - 15
         ),
         cv2.FONT_HERSHEY_SIMPLEX,
-        0.7,
+        0.6,
         (0, 0, 255),
         2
     )
